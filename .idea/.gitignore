@@ -12,3 +12,8 @@ misc.xml
 vcs.xml
 workspace.xml
 modules.xml
+Cliente.class
+Contemplacao.class
+GrupoConsorcio.class
+.classpath
+.project
