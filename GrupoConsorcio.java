@@ -1,14 +1,27 @@
 import java.util.ArrayList;
 
+import Enums.StatusGrupo; 
+
 public class GrupoConsorcio {
+
     private String nomeGrupo;
     private double valorTotal;
     private int numeroParticipantes;
     private double taxaAdmin;
-    private boolean status; 
+    private StatusGrupo status;
     private ArrayList<Contrato> listaContratos; //?????????w
 
-    
+    public GrupoConsorcio(String nomeGrupo, double valorTotal, int numeroParticipantes,
+     double taxaAdmin, StatusGrupo status, ArrayList<Contrato> listaContratos)  {
+
+        this.nomeGrupo = nomeGrupo;
+        this.valorTotal = valorTotal;
+        this.numeroParticipantes = numeroParticipantes;
+        this.taxaAdmin = taxaAdmin;
+        this.status = status;
+        this.listaContratos = listaContratos;
+    }
+
     public double calcularParcelas() {
         return this.valorTotal / this.numeroParticipantes;
     }
@@ -17,9 +30,8 @@ public class GrupoConsorcio {
         this.taxaAdmin = novaTaxa;
     }
 
-    protected void encerrarGrupo() {
-        this.status = false;
+    protected void encerrarContrato(StatusGrupo status) {
+        this.status = status;
     }
-
 }
 
