@@ -22,6 +22,30 @@ public class GrupoConsorcio {
         this.listaContratos = listaContratos;
     }
 
+    public String getNomeGrupo() {
+        return nomeGrupo;
+    }
+
+    public double getValorTotal() {
+        return valorTotal;
+    }
+
+    public int getNumeroParticipantes() {
+        return numeroParticipantes;
+    }
+
+    public double getTaxaAdmin() {
+        return taxaAdmin;
+    }
+
+    public StatusGrupo getStatus() {
+        return status;
+    }
+
+    public ArrayList<Contrato> getListaContratos() {
+        return listaContratos;
+    }
+
     public double calcularParcelas() {
         return this.valorTotal / this.numeroParticipantes;
     }
