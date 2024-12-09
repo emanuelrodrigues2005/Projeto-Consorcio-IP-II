@@ -1,12 +1,15 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 // Atributos
+
 public class Pagamento {
     private double valorPago;
     private LocalDate dataDePagamento;
     private Contrato contratoPagamento;
 
-    // Métodos
+    //Construtor
+
     public Pagamento(Contrato contratoPagamento, double valorPago, LocalDate dataDePagamento) {
         this.contratoPagamento = contratoPagamento;
         this.valorPago = valorPago;
@@ -15,24 +18,23 @@ public class Pagamento {
         realizarPagamento(); // Realiza o pagamento ao criar a instância
     }
 
+    //Métodos
+    
     public void realizarPagamento() {
         if (contratoPagamento != null) {
-            contratoPagamento.pagarParcela(valorPago); // Chama a função pagarParcela se o contrato for válido
-            System.out.println("Pagamento efetivado com sucesso.");
+            contratoPagamento.pagarParcela(valorPago);
+            System.out.println("Pagamento efetivado com sucesso.");// Chama a função pagarParcela se o contrato for válido
         } else {
             System.out.println("Pagamento não associado a um contrato.");
         }
     }
 
-    public double getValorPago() {
-        return valorPago;
-    }
+    public void exibirPagamento() {
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataFormatada = dataDePagamento.format(formatador);
 
-    public LocalDate getDataDePagamento() {
-        return dataDePagamento;
-    }
-
-    public Contrato getContratoPagamento() {
-        return contratoPagamento;
+        System.out.println("Detalhes do Pagamento:");
+        System.out.println("Data do pagamento: " + dataFormatada);
+        System.out.println("Valor pago: R$ " + String.format("%.2f", valorPago));
     }
 }
