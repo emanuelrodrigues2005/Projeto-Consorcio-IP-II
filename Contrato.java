@@ -19,6 +19,22 @@ public class Contrato {
         return saldoDevedor;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public GrupoConsorcio getGrupoContrato() {
+        return grupoContrato;
+    }
+
+    public int getParcelasPagas() {
+        return parcelasPagas;
+    }
+
+    public StatusContrato getStatusContrato() {
+        return statusContrato;
+    }
+
     public void pagarParcela(double valorParcela) {
         if (getSaldoDevedor() >= valorParcela) {
             saldoDevedor -= valorParcela;
