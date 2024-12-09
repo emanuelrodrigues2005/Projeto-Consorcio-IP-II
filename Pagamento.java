@@ -2,14 +2,12 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 // Atributos
-
 public class Pagamento {
     private double valorPago;
     private LocalDate dataDePagamento;
     private Contrato contratoPagamento;
 
     //Construtor
-
     public Pagamento(Contrato contratoPagamento, double valorPago, LocalDate dataDePagamento) {
         this.contratoPagamento = contratoPagamento;
         this.valorPago = valorPago;
@@ -19,7 +17,6 @@ public class Pagamento {
     }
 
     //Métodos
-    
     public void realizarPagamento() {
         if (contratoPagamento != null) {
             contratoPagamento.pagarParcela(valorPago);
