@@ -12,7 +12,6 @@ public class Cliente {
         this.cpf = cpf;
         this.telefone = telefone;
         this.email = email;
-        this.contrato = contrato;
     }
 
     public String getNome() {
@@ -33,5 +32,9 @@ public class Cliente {
 
     public Contrato getContrato() {
         return contrato;
+    }
+
+    public void setContrato(Contrato contrato) {
+        this.contrato = contrato;
     }
 }
