@@ -19,6 +19,7 @@ public class Contrato {
         this.grupoAssociado = grupoAssociado;
         this.parcelasPagas = 0;
         this.saldoDevedor = grupoAssociado.getValorTotal();
+        this.statusContrato = StatusContratoEnum.ATIVO;
     }
 
     public Cliente getCliente() {
@@ -39,6 +40,10 @@ public class Contrato {
 
     public LocalDate getDataContemplação() {
         return dataContemplação;
+    }
+
+    public void setDataContemplação(LocalDate dataContemplação) {
+        this.dataContemplação = dataContemplação;
     }
 
     public StatusContratoEnum getStatusContrato() {
