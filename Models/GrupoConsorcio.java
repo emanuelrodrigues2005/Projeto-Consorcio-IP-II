@@ -20,6 +20,7 @@ public class GrupoConsorcio {
         this.valorTotal = valorTotal;
         this.taxaAdmin = taxaAdmin;
         this.valorParcela = ((getValorTotal() + getValorTotal() * getTaxaAdmin()) / getNumeroParticipantes());
+        this.statusGrupoConsorcio = StatusGrupoConsorcioEnum.ATIVO;
     }
 
     public String getNomeGrupo() {

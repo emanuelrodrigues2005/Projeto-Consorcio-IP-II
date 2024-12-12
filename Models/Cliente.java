@@ -7,7 +7,7 @@ public class Cliente {
     private String email;
     private Contrato contrato;
 
-    public Cliente(String nome, String cpf, String telefone, String email, Contrato contrato) {
+    public Cliente(String nome, String cpf, String telefone, String email) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
