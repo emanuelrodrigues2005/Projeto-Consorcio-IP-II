@@ -1,6 +1,6 @@
 package Enums;
 
-public enum StatusGrupo {
+public enum StatusGrupoConsorcioEnum {
     ATIVO,
     ENCERRADO
 }
